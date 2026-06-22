@@ -1,974 +1,679 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prime Solar | Scale Your Energy. Zero The Cost.</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#050505">
+<meta name="color-scheme" content="dark">
+<meta name="description" content="Prime Solar — UHBVN empanelled rooftop & farm solar installer serving Karnal, Panipat and Ambala, Haryana. PM Surya Ghar subsidy and PM-KUSUM solar pumps.">
+<title>Prime Solar — Scale Your Energy. Zero The Cost.</title>
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Outfit:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-    <!-- FontAwesome CDN -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: {
+          display: ['Space Grotesk', 'sans-serif'],
+          body: ['Outfit', 'sans-serif'],
+        }
+      }
+    }
+  }
+</script>
 
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com">
-    </script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        'space': ['Space Grotesk', 'sans-serif'],
-                        'outfit': ['Outfit', 'sans-serif'],
-                    },
-                    animation: {
-                        'float-slow': 'floatSlow 8s ease-in-out infinite',
-                        'float-medium': 'floatMedium 6s ease-in-out infinite',
-                        'float-fast': 'floatFast 4s ease-in-out infinite',
-                        'pulse-glow': 'pulseGlow 2.5s ease-in-out infinite',
-                        'marquee': 'marquee 35s linear infinite',
-                        'gradient-shift': 'gradientShift 4s ease-in-out infinite',
-                        'orb1': 'orbFloat1 10s ease-in-out infinite',
-                        'orb2': 'orbFloat2 12s ease-in-out infinite',
-                        'orb3': 'orbFloat3 9s ease-in-out infinite',
-                        'grid-drift': 'gridDrift 20s linear infinite',
-                    },
-                    keyframes: {
-                        floatSlow: {
-                            '0%, 100%': { transform: 'translateY(0px) rotate(0deg)' },
-                            '25%': { transform: 'translateY(-20px) rotate(1deg)' },
-                            '50%': { transform: 'translateY(-8px) rotate(0deg)' },
-                            '75%': { transform: 'translateY(-25px) rotate(-1deg)' },
-                        },
-                        floatMedium: {
-                            '0%, 100%': { transform: 'translateY(0px)' },
-                            '50%': { transform: 'translateY(-30px)' },
-                        },
-                        floatFast: {
-                            '0%, 100%': { transform: 'translateY(0px) scale(1)' },
-                            '50%': { transform: 'translateY(-15px) scale(1.05)' },
-                        },
-                        pulseGlow: {
-                            '0%, 100%': { boxShadow: '0 0 20px rgba(16,185,129,0.3), 0 0 60px rgba(16,185,129,0.1)' },
-                            '50%': { boxShadow: '0 0 35px rgba(16,185,129,0.6), 0 0 100px rgba(16,185,129,0.25), 0 0 140px rgba(59,130,246,0.2)' },
-                        },
-                        marquee: {
-                            '0%': { transform: 'translateX(0%)' },
-                            '100%': { transform: 'translateX(-100%)' },
-                        },
-                        gradientShift: {
-                            '0%, 100%': { backgroundPosition: '0% 50%' },
-                            '50%': { backgroundPosition: '100% 50%' },
-                        },
-                        orbFloat1: {
-                            '0%, 100%': { transform: 'translate(0, 0) scale(1)', opacity: '0.6' },
-                            '25%': { transform: 'translate(60px, -80px) scale(1.3)', opacity: '0.9' },
-                            '50%': { transform: 'translate(-30px, -40px) scale(0.9)', opacity: '0.5' },
-                            '75%': { transform: 'translate(-70px, -100px) scale(1.2)', opacity: '0.8' },
-                        },
-                        orbFloat2: {
-                            '0%, 100%': { transform: 'translate(0, 0) scale(1)', opacity: '0.5' },
-                            '33%': { transform: 'translate(-80px, -50px) scale(1.4)', opacity: '0.85' },
-                            '66%': { transform: 'translate(40px, -90px) scale(0.8)', opacity: '0.45' },
-                        },
-                        orbFloat3: {
-                            '0%, 100%': { transform: 'translate(0, 0) scale(1)', opacity: '0.4' },
-                            '50%': { transform: 'translate(50px, -70px) scale(1.5)', opacity: '0.75' },
-                        },
-                        gridDrift: {
-                            '0%': { backgroundPosition: '0px 0px' },
-                            '100%': { backgroundPosition: '60px 60px' },
-                        },
-                    },
-                },
-            },
-        };
-    </script>
+<style>
+  :root{
+    color-scheme: dark;
+    --bg:#050505;
+    --green:#10b981;
+    --green-2:#34d399;
+    --blue:#00d9ff;
+    --ink:#f4f4f5;
+    --muted:#9aa0a6;
+    --border:rgba(255,255,255,.09);
+    --glass:rgba(255,255,255,.035);
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--bg);
+    color:var(--ink);
+    font-family:'Outfit',sans-serif;
+    overflow-x:hidden;
+    position:relative;
+  }
+  section, footer{scroll-margin-top:110px;}
+  .font-display{font-family:'Space Grotesk',sans-serif;}
 
-    <style>
-        :root {
-            --bg-deep: #050505;
-            --neon-green: #10b981;
-            --electric-blue: #3b82f6;
-            --surface-glass: rgba(255, 255, 255, 0.03);
-            --border-glass: rgba(255, 255, 255, 0.08);
-        }
+  /* ---------- scrollbar ---------- */
+  ::-webkit-scrollbar{width:8px;}
+  ::-webkit-scrollbar-track{background:#0a0a0a;}
+  ::-webkit-scrollbar-thumb{background:var(--green);border-radius:4px;}
+  .no-scrollbar::-webkit-scrollbar{display:none;}
+  .no-scrollbar{-ms-overflow-style:none;scrollbar-width:none;}
 
-        * {
-            scroll-behavior: smooth;
-        }
+  /* ---------- focus ---------- */
+  a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible{
+    outline:2px solid var(--green); outline-offset:3px; border-radius:4px;
+  }
 
-        body {
-            background-color: var(--bg-deep);
-            font-family: 'Outfit', sans-serif;
-            overflow-x: hidden;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
+  /* ---------- animated grid background ---------- */
+  .grid-bg{
+    position:fixed; inset:0; z-index:0; pointer-events:none;
+    background-image:
+      linear-gradient(rgba(16,185,129,0.08) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(16,185,129,0.08) 1px, transparent 1px);
+    background-size: 46px 46px;
+    -webkit-mask-image: radial-gradient(ellipse 75% 55% at 50% 0%, black 35%, transparent 100%);
+    mask-image: radial-gradient(ellipse 75% 55% at 50% 0%, black 35%, transparent 100%);
+    animation: gridPan 26s linear infinite;
+  }
+  @keyframes gridPan{
+    0%{background-position:0 0;}
+    100%{background-position:46px 46px;}
+  }
 
-        /* Animated Grid Background */
-        .animated-grid-bg {
-            position: fixed;
-            inset: 0;
-            pointer-events: none;
-            z-index: 0;
-            opacity: 0.35;
-            background-image:
-                radial-gradient(circle, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
-            background-size: 40px 40px;
-            animation: gridDrift 20s linear infinite;
-        }
+  /* ---------- floating glow orbs ---------- */
+  .orb{position:fixed;border-radius:50%;filter:blur(95px);z-index:0;pointer-events:none;}
+  .orb-1{width:480px;height:480px;background:var(--green);opacity:.35;top:-140px;left:-120px;animation:floatA 19s ease-in-out infinite;}
+  .orb-2{width:440px;height:440px;background:var(--blue);opacity:.28;top:25%;right:-180px;animation:floatB 23s ease-in-out infinite;}
+  .orb-3{width:380px;height:380px;background:var(--green-2);opacity:.22;bottom:-160px;left:28%;animation:floatA 27s ease-in-out infinite reverse;}
+  @keyframes floatA{0%,100%{transform:translate(0,0);}50%{transform:translate(50px,70px);}}
+  @keyframes floatB{0%,100%{transform:translate(0,0);}50%{transform:translate(-60px,50px);}}
 
-        /* Subtle radial vignette */
-        .vignette-overlay {
-            position: fixed;
-            inset: 0;
-            pointer-events: none;
-            z-index: 0;
-            background: radial-gradient(ellipse at 50% 30%, transparent 40%, rgba(5, 5, 5, 0.7) 85%, #050505 100%);
-        }
+  /* ---------- glass ---------- */
+  .glass{
+    background:var(--glass);
+    border:1px solid var(--border);
+    backdrop-filter:blur(20px);
+    -webkit-backdrop-filter:blur(20px);
+  }
 
-        /* Glowing Orbs */
-        .orb {
-            position: absolute;
-            border-radius: 50%;
-            pointer-events: none;
-            filter: blur(80px);
-            z-index: 0;
-        }
-        .orb-1 {
-            width: 350px;
-            height: 350px;
-            background: rgba(16, 185, 129, 0.25);
-            top: -5%;
-            right: -8%;
-            animation: orbFloat1 10s ease-in-out infinite;
-        }
-        .orb-2 {
-            width: 280px;
-            height: 280px;
-            background: rgba(59, 130, 246, 0.22);
-            top: 30%;
-            left: -10%;
-            animation: orbFloat2 12s ease-in-out infinite;
-        }
-        .orb-3 {
-            width: 220px;
-            height: 220px;
-            background: rgba(16, 185, 129, 0.3);
-            bottom: 15%;
-            right: 10%;
-            animation: orbFloat3 9s ease-in-out infinite;
-        }
-        .orb-4 {
-            width: 180px;
-            height: 180px;
-            background: rgba(99, 102, 241, 0.2);
-            top: 55%;
-            left: 40%;
-            animation: orbFloat1 11s ease-in-out infinite reverse;
-        }
+  /* ---------- animated gradient text ---------- */
+  .text-gradient{
+    background:linear-gradient(90deg,var(--green),var(--blue),var(--green-2),var(--green));
+    background-size:300% auto;
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+    animation:gradientShift 7s linear infinite;
+  }
+  @keyframes gradientShift{0%{background-position:0% 50%;}100%{background-position:300% 50%;}}
 
-        /* Glass Card */
-        .glass-card {
-            background: rgba(255, 255, 255, 0.03);
-            backdrop-filter: blur(24px);
-            -webkit-backdrop-filter: blur(24px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            border-radius: 20px;
-            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-        }
-        .glass-card:hover {
-            background: rgba(255, 255, 255, 0.06);
-            border-color: rgba(255, 255, 255, 0.16);
-            box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5), 0 0 60px rgba(16, 185, 129, 0.08);
-            transform: translateY(-4px);
-        }
+  /* ---------- marquee ---------- */
+  .marquee-wrap{overflow:hidden;}
+  .marquee-track{display:flex;align-items:center;width:max-content;gap:2.5rem;animation:marquee 30s linear infinite;}
+  .marquee-wrap:hover .marquee-track{animation-play-state:paused;}
+  @keyframes marquee{from{transform:translateX(0);}to{transform:translateX(-50%);}}
 
-        /* Glass Navbar */
-        .glass-nav {
-            background: rgba(10, 10, 10, 0.6);
-            backdrop-filter: blur(30px);
-            -webkit-backdrop-filter: blur(30px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 9999px;
-        }
+  /* ---------- scroll reveal ---------- */
+  .reveal{opacity:0;transform:translateY(34px);transition:opacity .8s cubic-bezier(.16,1,.3,1), transform .8s cubic-bezier(.16,1,.3,1);}
+  .reveal.in-view{opacity:1;transform:translateY(0);}
 
-        /* Text Gradient Animation */
-        .text-gradient-animated {
-            background: linear-gradient(135deg,
-                    #10b981 0%,
-                    #34d399 20%,
-                    #3b82f6 40%,
-                    #60a5fa 55%,
-                    #10b981 70%,
-                    #6ee7b7 85%,
-                    #10b981 100%);
-            background-size: 300% 300%;
-            animation: gradientShift 5s ease-in-out infinite;
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            color: transparent;
-        }
+  /* ---------- orbit rings (hero signature) ---------- */
+  @keyframes orbitSpin{to{transform:rotate(360deg);}}
+  .ring-spin-slow{animation:orbitSpin 34s linear infinite;}
+  .ring-spin-rev{animation:orbitSpin 26s linear infinite reverse;}
 
-        .text-gradient-static {
-            background: linear-gradient(135deg, #10b981 0%, #3b82f6 60%, #60a5fa 100%);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            color: transparent;
-        }
+  /* ---------- glow button ---------- */
+  .btn-glow{box-shadow:0 0 0 0 rgba(16,185,129,.6);transition:box-shadow .35s ease, background-color .35s ease, transform .2s ease;}
+  .btn-glow:hover{box-shadow:0 0 45px 6px rgba(16,185,129,.45);transform:translateY(-1px);}
 
-        /* Range Slider Styling */
-        input[type="range"] {
-            -webkit-appearance: none;
-            appearance: none;
-            width: 100%;
-            height: 8px;
-            border-radius: 9999px;
-            background: rgba(255, 255, 255, 0.1);
-            outline: none;
-            cursor: pointer;
-        }
-        input[type="range"]::-webkit-slider-thumb {
-            -webkit-appearance: none;
-            appearance: none;
-            width: 28px;
-            height: 28px;
-            border-radius: 50%;
-            background: #10b981;
-            cursor: pointer;
-            border: 3px solid #050505;
-            box-shadow: 0 0 20px rgba(16, 185, 129, 0.7), 0 0 40px rgba(16, 185, 129, 0.3);
-            transition: all 0.2s ease;
-        }
-        input[type="range"]::-webkit-slider-thumb:hover {
-            box-shadow: 0 0 30px rgba(16, 185, 129, 0.9), 0 0 60px rgba(16, 185, 129, 0.5);
-            transform: scale(1.1);
-        }
-        input[type="range"]::-moz-range-thumb {
-            width: 28px;
-            height: 28px;
-            border-radius: 50%;
-            background: #10b981;
-            cursor: pointer;
-            border: 3px solid #050505;
-            box-shadow: 0 0 20px rgba(16, 185, 129, 0.7);
-        }
+  /* ---------- range slider ---------- */
+  input[type=range]{
+    -webkit-appearance:none; appearance:none;
+    width:100%; height:6px; border-radius:999px;
+    background:rgba(255,255,255,0.1);
+  }
+  input[type=range]::-webkit-slider-thumb{
+    -webkit-appearance:none; width:20px; height:20px; border-radius:50%;
+    background:var(--green); box-shadow:0 0 14px rgba(16,185,129,.85); cursor:pointer;
+  }
+  input[type=range]::-moz-range-thumb{
+    width:20px; height:20px; border-radius:50%; border:none;
+    background:var(--green); box-shadow:0 0 14px rgba(16,185,129,.85); cursor:pointer;
+  }
+  input[type=range]::-moz-range-track{
+    background:rgba(255,255,255,0.1); height:6px; border-radius:999px;
+  }
 
-        /* Custom Select Styling */
-        select {
-            -webkit-appearance: none;
-            appearance: none;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%2310b981' viewBox='0 0 16 16'%3E%3Cpath d='M8 10L4 6h8z'/%3E%3C/svg%3E");
-            background-repeat: no-repeat;
-            background-position: right 16px center;
-            padding-right: 44px;
-        }
-
-        /* Scroll Reveal */
-        .reveal {
-            opacity: 0;
-            transform: translateY(50px);
-            transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-                transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-        }
-        .reveal.revealed {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* Marquee Container */
-        .marquee-wrapper {
-            overflow: hidden;
-            position: relative;
-            width: 100%;
-        }
-        .marquee-inner {
-            display: inline-flex;
-            white-space: nowrap;
-            will-change: transform;
-            animation: marquee 28s linear infinite;
-            width: max-content;
-            min-width: 200%;
-        }
-        .marquee-inner span {
-            display: inline-flex;
-            align-items: center;
-            padding-right: 2.5rem;
-        }
-
-        @media (max-width: 640px) {
-            .marquee-inner {
-                animation-duration: 18s;
-            }
-            .marquee-inner span {
-                padding-right: 1.5rem;
-            }
-        }
-
-        /* Toggle Switch */
-        .toggle-option {
-            cursor: pointer;
-            transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-            position: relative;
-            z-index: 1;
-        }
-        .toggle-active {
-            background: #10b981 !important;
-            color: #050505 !important;
-            font-weight: 700;
-            box-shadow: 0 0 28px rgba(16, 185, 129, 0.55);
-            transform: scale(1.03);
-        }
-
-        /* Glow ring for CTA */
-        .glow-ring {
-            position: relative;
-        }
-        .glow-ring::before {
-            content: '';
-            position: absolute;
-            inset: -4px;
-            border-radius: 9999px;
-            background: linear-gradient(135deg, #10b981, #3b82f6, #10b981);
-            background-size: 200% 200%;
-            animation: gradientShift 3s ease-in-out infinite;
-            z-index: -1;
-            opacity: 0.7;
-            filter: blur(8px);
-            transition: opacity 0.3s;
-        }
-        .glow-ring:hover::before {
-            opacity: 1;
-            filter: blur(14px);
-        }
-
-        /* Scrollbar */
-        ::-webkit-scrollbar {
-            width: 6px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #050505;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: rgba(16, 185, 129, 0.4);
-            border-radius: 10px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: rgba(16, 185, 129, 0.7);
-        }
-
-        /* Responsive adjustments */
-        @media (max-width: 768px) {
-            .orb {
-                filter: blur(50px);
-            }
-            .orb-1 {
-                width: 200px;
-                height: 200px;
-            }
-            .orb-2 {
-                width: 160px;
-                height: 160px;
-            }
-            .orb-3 {
-                width: 140px;
-                height: 140px;
-            }
-            .glass-nav {
-                border-radius: 24px;
-                margin: 0 8px;
-            }
-        }
-    </style>
+  /* ---------- reduced motion ---------- */
+  @media (prefers-reduced-motion: reduce){
+    *{animation-duration:.01ms !important; animation-iteration-count:1 !important; transition-duration:.01ms !important;}
+  }
+</style>
 </head>
-<body class="min-h-screen text-white font-outfit antialiased relative">
 
-    <!-- Animated Grid Background -->
-    <div class="animated-grid-bg"></div>
-    <div class="vignette-overlay"></div>
+<body>
 
-    <!-- Glowing Orbs (Hero area) -->
-    <div class="orb orb-1"></div>
-    <div class="orb orb-2"></div>
-    <div class="orb orb-3"></div>
-    <div class="orb orb-4"></div>
+<div class="grid-bg"></div>
+<div class="orb orb-1"></div>
+<div class="orb orb-2"></div>
+<div class="orb orb-3"></div>
 
-    <!-- ==================== FLOATING NAVBAR ==================== -->
-    <nav class="fixed top-3 sm:top-5 left-1/2 -translate-x-1/2 z-50 w-[95%] sm:w-auto sm:min-w-[600px] max-w-[720px] glass-nav px-4 sm:px-6 py-3 flex items-center justify-between shadow-2xl shadow-black/60 transition-all duration-500" id="navbar">
-        <!-- Logo -->
-        <a href="#" class="flex items-center gap-2 flex-shrink-0">
-            <div class="w-9 h-9 rounded-full bg-gradient-to-br from-emerald-400 to-emerald-600 flex items-center justify-center shadow-lg shadow-emerald-500/40">
-                <i class="fa-solid fa-bolt text-white text-sm"></i>
-            </div>
-            <span class="font-space font-bold text-lg sm:text-xl text-white tracking-tight">Prime<span class="text-emerald-400">Solar</span></span>
-        </a>
+<!-- ============ NAVBAR ============ -->
+<nav class="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[94%] max-w-5xl">
+  <div id="navInner" class="glass rounded-full px-5 py-3 flex items-center justify-between gap-4 transition-shadow">
+    <a href="#hero" class="flex items-center gap-2 font-display font-semibold text-base sm:text-lg tracking-tight shrink-0">
+      <span class="w-8 h-8 rounded-full bg-gradient-to-br from-[var(--green)] to-[var(--blue)] flex items-center justify-center text-black text-sm">
+        <i class="fa-solid fa-bolt"></i>
+      </span>
+      PRIME<span class="text-[var(--green)]">SOLAR</span>
+    </a>
 
-        <!-- Desktop Links -->
-        <div class="hidden md:flex items-center gap-6 text-sm font-medium text-gray-300">
-            <a href="#services" class="hover:text-emerald-400 transition-colors duration-300">Services</a>
-            <a href="#calculator" class="hover:text-emerald-400 transition-colors duration-300">ROI Calculator</a>
-            <a href="#about" class="hover:text-emerald-400 transition-colors duration-300">About</a>
-            <a href="#contact" class="hover:text-emerald-400 transition-colors duration-300">Contact</a>
-        </div>
-
-        <!-- CTA + Mobile Menu -->
-        <div class="flex items-center gap-3">
-            <a href="#calculator" class="hidden sm:inline-flex items-center gap-2 bg-emerald-500 hover:bg-emerald-400 text-black font-semibold px-5 py-2 rounded-full text-sm transition-all duration-300 shadow-lg shadow-emerald-500/30 hover:shadow-emerald-400/50 hover:scale-105 font-space">
-                <i class="fa-solid fa-calculator"></i> Calculate
-            </a>
-            <!-- Mobile Hamburger -->
-            <button id="mobileMenuBtn" class="md:hidden text-white text-xl p-2 hover:text-emerald-400 transition-colors" aria-label="Menu">
-                <i class="fa-solid fa-bars"></i>
-            </button>
-        </div>
-    </nav>
-
-    <!-- Mobile Dropdown Menu -->
-    <div id="mobileMenu" class="fixed top-20 left-4 right-4 z-40 glass-card rounded-2xl p-5 flex flex-col gap-4 text-center text-white font-medium md:hidden transform scale-95 opacity-0 pointer-events-none transition-all duration-300">
-        <a href="#services" class="py-2 hover:text-emerald-400 transition-colors mobile-link">Services</a>
-        <a href="#calculator" class="py-2 hover:text-emerald-400 transition-colors mobile-link">ROI Calculator</a>
-        <a href="#about" class="py-2 hover:text-emerald-400 transition-colors mobile-link">About</a>
-        <a href="#contact" class="py-2 hover:text-emerald-400 transition-colors mobile-link">Contact</a>
-        <a href="#calculator" class="bg-emerald-500 text-black font-semibold py-3 rounded-full text-sm shadow-lg shadow-emerald-500/30 mobile-link">Calculate Subsidy <i class="fa-solid fa-arrow-right ml-1"></i></a>
+    <div class="hidden md:flex items-center gap-8 text-sm text-white/70">
+      <a href="#services" class="hover:text-white transition">Services</a>
+      <a href="#calculator" class="hover:text-white transition">Calculator</a>
+      <a href="#coverage" class="hover:text-white transition">Coverage</a>
+      <a href="#contact" class="hover:text-white transition">Contact</a>
     </div>
 
-    <!-- ==================== HERO SECTION ==================== -->
-    <section class="relative z-10 pt-32 pb-20 sm:pt-44 sm:pb-28 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto text-center" id="hero">
-        <!-- Badge -->
-        <div class="reveal inline-flex items-center gap-2 glass-card px-4 py-2 rounded-full text-xs sm:text-sm text-emerald-300 mb-8 font-medium">
-            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-            UHBVN Empaneled Installers — Haryana
+    <div class="flex items-center gap-3">
+      <a href="tel:+919050319785" aria-label="Call Prime Solar" class="hidden sm:inline-flex w-10 h-10 items-center justify-center rounded-full glass hover:bg-white/10 transition shrink-0">
+        <i class="fa-solid fa-phone text-sm"></i>
+      </a>
+      <a href="#calculator" class="hidden sm:inline-flex items-center gap-2 bg-[var(--green)] text-black text-sm font-semibold px-5 py-2.5 rounded-full hover:bg-[var(--green-2)] transition">
+        Get Free Quote <i class="fa-solid fa-arrow-right text-xs"></i>
+      </a>
+      <button id="menuBtn" aria-label="Toggle menu" class="md:hidden text-white text-xl w-9 h-9 flex items-center justify-center">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </div>
+
+  <div id="mobileMenu" class="hidden glass mt-2 rounded-2xl p-5 flex flex-col gap-4 text-sm text-white/80">
+    <a href="#services" class="mobile-link hover:text-white transition">Services</a>
+    <a href="#calculator" class="mobile-link hover:text-white transition">Calculator</a>
+    <a href="#coverage" class="mobile-link hover:text-white transition">Coverage</a>
+    <a href="#contact" class="mobile-link hover:text-white transition">Contact</a>
+    <a href="tel:+919050319785" class="mobile-link inline-flex items-center justify-center gap-2 glass px-5 py-2.5 rounded-full mt-2">
+      <i class="fa-solid fa-phone"></i> +91 90503 19785
+    </a>
+    <a href="#calculator" class="mobile-link inline-flex items-center justify-center gap-2 bg-[var(--green)] text-black font-semibold px-5 py-2.5 rounded-full mt-1">
+      Get Free Quote <i class="fa-solid fa-arrow-right text-xs"></i>
+    </a>
+  </div>
+</nav>
+
+<!-- ============ HERO ============ -->
+<section id="hero" class="relative z-10 pt-36 sm:pt-44 pb-24 px-6 max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+  <div class="reveal">
+    <div class="inline-flex items-center gap-2 glass rounded-full px-4 py-1.5 text-xs text-white/70 mb-6">
+      <span class="w-2 h-2 rounded-full bg-[var(--green)] animate-pulse"></span>
+      UHBVN EMPANELLED INSTALLER · HARYANA
+    </div>
+
+    <h1 class="font-display text-5xl sm:text-6xl lg:text-7xl font-semibold leading-[1.05] tracking-tight">
+      Scale Your Energy.<br>
+      <span class="text-gradient">Zero The Cost.</span>
+    </h1>
+
+    <p class="mt-6 text-white/60 text-lg max-w-lg">
+      Prime Solar designs and installs subsidy-backed solar systems for homes and farms across
+      <span class="text-white">Karnal, Panipat &amp; Ambala</span>. UHBVN empanelled. PM Surya Ghar
+      and PM-KUSUM compliant, start to finish.
+    </p>
+
+    <div class="mt-9 flex flex-wrap items-center gap-4">
+      <a href="#calculator" class="btn-glow bg-[var(--green)] text-black font-semibold px-7 py-3.5 rounded-full hover:bg-[var(--green-2)] transition">
+        <i class="fa-solid fa-calculator mr-2"></i>Calculate Subsidy
+      </a>
+      <a href="#services" class="glass px-7 py-3.5 rounded-full font-medium hover:bg-white/10 transition">
+        Explore Systems
+      </a>
+    </div>
+
+    <a href="tel:+919050319785" class="mt-5 inline-flex items-center gap-2 text-sm text-white/55 hover:text-white transition">
+      <i class="fa-solid fa-phone text-[var(--green)]"></i> Or call us directly: <span class="text-white">+91 90503 19785</span>
+    </a>
+
+    <div class="mt-14 flex sm:grid sm:grid-cols-3 gap-6 sm:max-w-md overflow-x-auto sm:overflow-visible snap-x snap-mandatory no-scrollbar -mx-6 px-6 sm:mx-0 sm:px-0 pb-1">
+      <div class="shrink-0 snap-start min-w-[150px] sm:min-w-0">
+        <p class="font-display text-2xl sm:text-3xl text-white">600+</p>
+        <p class="text-xs text-white/50 mt-1">Installations Live</p>
+      </div>
+      <div class="shrink-0 snap-start min-w-[150px] sm:min-w-0">
+        <p class="font-display text-2xl sm:text-3xl text-white">14MW+</p>
+        <p class="text-xs text-white/50 mt-1">Capacity Deployed</p>
+      </div>
+      <div class="shrink-0 snap-start min-w-[150px] sm:min-w-0">
+        <p class="font-display text-2xl sm:text-3xl text-white">25-Yr</p>
+        <p class="text-xs text-white/50 mt-1">Performance Warranty</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="relative hidden lg:flex items-center justify-center reveal" style="transition-delay:.15s">
+    <div class="relative w-[420px] h-[420px]">
+      <div class="absolute inset-0 rounded-full border border-[rgba(16,185,129,0.25)] ring-spin-slow"></div>
+      <div class="absolute inset-10 rounded-full border border-[rgba(0,217,255,0.25)] ring-spin-rev"></div>
+      <div class="absolute inset-20 rounded-full border border-white/10"></div>
+      <div class="absolute inset-0 flex items-center justify-center">
+        <div class="w-40 h-40 rounded-full bg-gradient-to-br from-[var(--green)] to-[var(--blue)] blur-2xl opacity-50"></div>
+      </div>
+      <div class="absolute inset-0 flex items-center justify-center">
+        <div class="glass rounded-3xl px-9 py-7 text-center">
+          <i class="fa-solid fa-solar-panel text-3xl text-[var(--green)]"></i>
+          <p class="mt-3 text-sm text-white/70 font-display leading-snug">Grid-Tied<br>Net Metering</p>
         </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-        <!-- Headline -->
-        <h1 class="reveal font-space font-bold text-5xl sm:text-7xl lg:text-8xl leading-[1.05] mb-6 max-w-5xl mx-auto">
-            <span class="text-gradient-animated">Scale Your Energy.</span><br>
-            <span class="text-white">Zero The Cost.</span>
-        </h1>
+<!-- ============ MARQUEE ============ -->
+<div class="marquee-wrap relative z-10 border-y border-white/10 bg-white/[0.02] py-4">
+  <div class="marquee-track font-display text-sm tracking-wide text-white/70">
+    <span>⚡ PM Surya Ghar Yojna</span><span class="text-[var(--green)]">•</span>
+    <span>Up to ₹78,000 Subsidy</span><span class="text-[var(--blue)]">•</span>
+    <span>Zero Electricity Bill</span><span class="text-[var(--green)]">•</span>
+    <span>PM-KUSUM 75% Grant</span><span class="text-[var(--blue)]">•</span>
+    <span>UHBVN Approved</span><span class="text-[var(--green)]">•</span>
+    <span>Karnal</span><span class="text-[var(--blue)]">•</span>
+    <span>Panipat</span><span class="text-[var(--green)]">•</span>
+    <span>Ambala</span><span class="text-[var(--blue)]">•</span>
+    <span>⚡ PM Surya Ghar Yojna</span><span class="text-[var(--green)]">•</span>
+    <span>Up to ₹78,000 Subsidy</span><span class="text-[var(--blue)]">•</span>
+    <span>Zero Electricity Bill</span><span class="text-[var(--green)]">•</span>
+    <span>PM-KUSUM 75% Grant</span><span class="text-[var(--blue)]">•</span>
+    <span>UHBVN Approved</span><span class="text-[var(--green)]">•</span>
+    <span>Karnal</span><span class="text-[var(--blue)]">•</span>
+    <span>Panipat</span><span class="text-[var(--green)]">•</span>
+    <span>Ambala</span><span class="text-[var(--blue)]">•</span>
+  </div>
+</div>
 
-        <!-- Tagline -->
-        <p class="reveal text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed font-outfit font-light">
-            UHBVN-empaneled solar installers delivering premium rooftop systems for homes and high-efficiency solar pumps for farms across <span class="text-white font-medium">Karnal, Panipat & Ambala</span>.
+<!-- ============ SERVICES (BENTO) ============ -->
+<section id="services" class="relative z-10 max-w-7xl mx-auto px-6 py-28">
+  <div class="reveal max-w-2xl">
+    <p class="text-xs tracking-[0.2em] text-[var(--green)] font-display">WHAT WE BUILD</p>
+    <h2 class="font-display text-4xl sm:text-5xl font-semibold mt-4">
+      Two systems. <span class="text-white/40">One mission:</span> energy independence.
+    </h2>
+  </div>
+
+  <div class="mt-14 grid lg:grid-cols-5 gap-5">
+    <!-- Domestic Rooftop -->
+    <div class="reveal glass rounded-3xl p-8 lg:col-span-3 min-h-[420px] flex flex-col justify-between group">
+      <div>
+        <div class="flex items-center justify-between">
+          <span class="text-xs font-display tracking-widest text-[var(--green)] glass rounded-full px-3 py-1">PM SURYA GHAR</span>
+          <i class="fa-solid fa-house-chimney text-2xl text-white/25"></i>
+        </div>
+        <h3 class="font-display text-3xl mt-8">Domestic Rooftop Solar</h3>
+        <p class="text-white/55 mt-3 max-w-md">
+          Grid-tied, net-metered systems engineered for Haryana homes — sized to your bill,
+          funded by the centre, built to run for a generation.
         </p>
-
-        <!-- CTA Buttons -->
-        <div class="reveal flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a href="#calculator" class="glow-ring inline-flex items-center gap-3 bg-emerald-500 hover:bg-emerald-400 text-black font-bold px-8 py-4 rounded-full text-lg transition-all duration-300 shadow-2xl shadow-emerald-500/40 hover:shadow-emerald-400/60 hover:scale-105 font-space">
-                <i class="fa-solid fa-calculator text-lg"></i> Calculate Subsidy
-                <i class="fa-solid fa-arrow-right"></i>
-            </a>
-            <a href="#services" class="inline-flex items-center gap-2 glass-card px-8 py-4 rounded-full text-white font-semibold text-lg hover:bg-white/8 transition-all duration-300 font-space">
-                <i class="fa-solid fa-circle-play text-emerald-400"></i> Explore Services
-            </a>
+      </div>
+      <div>
+        <div class="grid grid-cols-3 gap-4">
+          <div>
+            <p class="font-display text-2xl text-[var(--green)]">₹78K</p>
+            <p class="text-xs text-white/50 mt-1">Max Subsidy</p>
+          </div>
+          <div>
+            <p class="font-display text-2xl text-white">25 Yrs</p>
+            <p class="text-xs text-white/50 mt-1">Warranty</p>
+          </div>
+          <div>
+            <p class="font-display text-2xl text-white">1–10kW</p>
+            <p class="text-xs text-white/50 mt-1">System Range</p>
+          </div>
         </div>
-
-        <!-- Quick Stats -->
-        <div class="reveal flex flex-wrap items-center justify-center gap-6 sm:gap-10 mt-14 text-sm text-gray-400">
-            <div class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-emerald-400"></i> UHBVN Approved</div>
-            <div class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-emerald-400"></i> 25+ Years Warranty</div>
-            <div class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-emerald-400"></i> ₹78K Max Subsidy</div>
-            <div class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-emerald-400"></i> 75% PM-KUSUM Grant</div>
-        </div>
-    </section>
-
-    <!-- ==================== INFINITE MARQUEE ==================== -->
-    <div class="marquee-wrapper relative z-10 border-y border-white/8 bg-white/[0.02] py-4 sm:py-5 my-4" id="marquee">
-        <div class="marquee-inner text-sm sm:text-base font-medium tracking-wide">
-            <span class="text-emerald-400">⚡ PM Surya Ghar Yojna</span>
-            <span class="text-gray-300">•</span>
-            <span class="text-white">Up to ₹78,000 Subsidy</span>
-            <span class="text-gray-300">•</span>
-            <span class="text-blue-400">Zero Electricity Bill</span>
-            <span class="text-gray-300">•</span>
-            <span class="text-emerald-400">🌾 PM-KUSUM 75% Grant</span>
-            <span class="text-gray-300">•</span>
-            <span class="text-white">UHBVN Approved</span>
-            <span class="text-gray-300">•</span>
-            <span class="text-blue-400">📍 Karnal</span>
-            <span class="text-gray-300">•</span>
-            <span class="text-blue-400">📍 Panipat</span>
-            <span class="text-gray-300">•</span>
-            <span class="text-blue-400">📍 Ambala</span>
-            <span class="text-gray-300">•</span>
-            <!-- Duplicate for seamless loop -->
-            <span class="text-emerald-400">⚡ PM Surya Ghar Yojna</span>
-            <span class="text-gray-300">•</span>
-            <span class="text-white">Up to ₹78,000 Subsidy</span>
-            <span class="text-gray-300">•</span>
-            <span class="text-blue-400">Zero Electricity Bill</span>
-            <span class="text-gray-300">•</span>
-            <span class="text-emerald-400">🌾 PM-KUSUM 75% Grant</span>
-            <span class="text-gray-300">•</span>
-            <span class="text-white">UHBVN Approved</span>
-            <span class="text-gray-300">•</span>
-            <span class="text-blue-400">📍 Karnal</span>
-            <span class="text-gray-300">•</span>
-            <span class="text-blue-400">📍 Panipat</span>
-            <span class="text-gray-300">•</span>
-            <span class="text-blue-400">📍 Ambala</span>
-            <span class="text-gray-300">•</span>
-        </div>
+        <a href="#calculator" class="mt-8 inline-flex items-center gap-2 text-sm text-white/70 group-hover:text-[var(--green)] transition">
+          Estimate your subsidy <i class="fa-solid fa-arrow-right text-xs"></i>
+        </a>
+      </div>
     </div>
 
-    <!-- ==================== BENTO GRID SERVICES ==================== -->
-    <section class="relative z-10 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto py-16 sm:py-24" id="services">
-        <div class="reveal text-center mb-14">
-            <p class="text-emerald-400 font-semibold text-sm tracking-widest uppercase mb-3 font-space">Our Services</p>
-            <h2 class="font-space font-bold text-4xl sm:text-5xl lg:text-6xl text-white">Powering Homes & Farms</h2>
-            <p class="text-gray-400 mt-4 max-w-xl mx-auto">Government-backed solar solutions tailored for residential rooftops and agricultural needs across Haryana.</p>
+    <!-- Solar Pumps -->
+    <div class="reveal glass rounded-3xl p-8 lg:col-span-2 min-h-[420px] flex flex-col justify-between group">
+      <div>
+        <div class="flex items-center justify-between">
+          <span class="text-xs font-display tracking-widest text-[var(--blue)] glass rounded-full px-3 py-1">PM-KUSUM</span>
+          <i class="fa-solid fa-tractor text-2xl text-white/25"></i>
+        </div>
+        <h3 class="font-display text-2xl mt-8">Agricultural Solar Pumps</h3>
+        <p class="text-white/55 mt-3 text-sm">
+          Diesel-free irrigation for farmland across Karnal, Panipat &amp; Ambala.
+        </p>
+      </div>
+      <div>
+        <div class="space-y-3 text-sm">
+          <div class="flex justify-between border-b border-white/10 pb-2">
+            <span class="text-white/50">Capacity</span><span>3HP – 10HP</span>
+          </div>
+          <div class="flex justify-between border-b border-white/10 pb-2">
+            <span class="text-white/50">Govt Grant</span><span class="text-[var(--blue)]">75%</span>
+          </div>
+          <div class="flex justify-between">
+            <span class="text-white/50">Use Case</span><span>Farm Irrigation</span>
+          </div>
+        </div>
+        <a href="#calculator" class="mt-8 inline-flex items-center gap-2 text-sm text-white/70 group-hover:text-[var(--blue)] transition">
+          See pump pricing <i class="fa-solid fa-arrow-right text-xs"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="mt-5 flex sm:grid sm:grid-cols-3 gap-5 overflow-x-auto sm:overflow-visible snap-x snap-mandatory no-scrollbar -mx-6 px-6 sm:mx-0 sm:px-0 pb-2">
+    <div id="coverage" class="reveal glass rounded-3xl p-6 flex flex-col justify-between min-h-[150px] shrink-0 snap-start min-w-[78%] sm:min-w-0">
+      <i class="fa-solid fa-location-dot text-xl text-[var(--green)]"></i>
+      <div>
+        <p class="font-display text-lg mt-4">Serving 3 Districts</p>
+        <p class="text-white/50 text-sm mt-1">Karnal · Panipat · Ambala</p>
+      </div>
+    </div>
+    <div class="reveal glass rounded-3xl p-6 flex flex-col justify-between min-h-[150px] shrink-0 snap-start min-w-[78%] sm:min-w-0">
+      <i class="fa-solid fa-shield-halved text-xl text-[var(--blue)]"></i>
+      <div>
+        <p class="font-display text-lg mt-4">UHBVN Empanelled</p>
+        <p class="text-white/50 text-sm mt-1">Approved installer for grid-tied subsidy systems.</p>
+      </div>
+    </div>
+    <div class="reveal glass rounded-3xl p-6 flex flex-col justify-between min-h-[150px] shrink-0 snap-start min-w-[78%] sm:min-w-0">
+      <i class="fa-solid fa-file-circle-check text-xl text-[var(--green)]"></i>
+      <div>
+        <p class="font-display text-lg mt-4">End-to-End Service</p>
+        <p class="text-white/50 text-sm mt-1">Survey, installation &amp; subsidy paperwork handled.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ROI CALCULATOR ============ -->
+<section id="calculator" class="relative z-10 max-w-5xl mx-auto px-6 py-28">
+  <div class="reveal text-center max-w-2xl mx-auto">
+    <p class="text-xs tracking-[0.2em] text-[var(--blue)] font-display">LIVE CALCULATOR</p>
+    <h2 class="font-display text-4xl sm:text-5xl font-semibold mt-4">See your numbers before you decide.</h2>
+    <p class="text-white/55 mt-4">Government subsidy math, worked out in real time. No sales call required.</p>
+  </div>
+
+  <!-- Toggle -->
+  <div class="reveal glass rounded-[1.6rem] mt-12 p-2 max-w-md mx-auto relative">
+    <div id="toggleIndicator" class="absolute top-2 left-2 h-[calc(100%-1rem)] w-[calc(50%-0.5rem)] rounded-xl bg-[var(--green)] transition-transform duration-300 ease-out"></div>
+    <div class="relative grid grid-cols-2 z-10">
+      <button id="tabResidential" type="button" class="py-3 px-2 rounded-xl font-display text-xs sm:text-sm font-medium transition">
+        <span class="sm:hidden">Home</span><span class="hidden sm:inline">Residential Unit</span>
+      </button>
+      <button id="tabAgri" type="button" class="py-3 px-2 rounded-xl font-display text-xs sm:text-sm font-medium transition">
+        <span class="sm:hidden">Farm</span><span class="hidden sm:inline">Agricultural Pump</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Panels -->
+  <div class="reveal glass rounded-[1.8rem] mt-6 p-6 sm:p-10">
+
+    <!-- Residential Panel -->
+    <div id="panelResidential" class="grid md:grid-cols-2 gap-10">
+      <div>
+        <p class="text-sm text-white/50">Monthly Electricity Bill</p>
+        <p class="font-display text-4xl mt-2" id="billDisplay">₹3,000</p>
+        <input id="billRange" type="range" min="1000" max="15000" step="500" value="3000" class="mt-6" aria-label="Monthly electricity bill">
+        <div class="flex justify-between text-xs text-white/40 mt-2">
+          <span>₹1,000</span><span>₹15,000</span>
+        </div>
+        <p class="text-xs text-white/40 mt-6 leading-relaxed">
+          Approx. units consumed: <span id="unitsOut" class="text-white/70">428</span> units/month,
+          based on an average tariff of ₹7/unit.
+        </p>
+      </div>
+
+      <div>
+        <div class="flex sm:grid sm:grid-cols-2 gap-4 overflow-x-auto sm:overflow-visible snap-x snap-mandatory no-scrollbar pb-2">
+          <div class="glass rounded-2xl p-5 shrink-0 snap-start min-w-[44%] sm:min-w-0">
+            <p class="text-xs text-white/50">System Size</p>
+            <p class="font-display text-2xl mt-2 text-[var(--green)]" id="kwOut">4 kW</p>
+          </div>
+          <div class="glass rounded-2xl p-5 shrink-0 snap-start min-w-[44%] sm:min-w-0">
+            <p class="text-xs text-white/50">Subsidy</p>
+            <p class="font-display text-2xl mt-2 text-[var(--blue)]" id="subsidyOut">₹78,000</p>
+          </div>
+          <div class="glass rounded-2xl p-5 shrink-0 snap-start min-w-[44%] sm:min-w-0">
+            <p class="text-xs text-white/50">Net Investment</p>
+            <p class="font-display text-2xl mt-2" id="netCostOut">₹1,42,000</p>
+          </div>
+          <div class="glass rounded-2xl p-5 shrink-0 snap-start min-w-[44%] sm:min-w-0">
+            <p class="text-xs text-white/50">Payback Period</p>
+            <p class="font-display text-2xl mt-2" id="paybackOut">3.9 Yrs</p>
+          </div>
         </div>
 
-        <!-- Bento Grid: Asymmetric 2-column layout -->
-        <div class="grid grid-cols-1 lg:grid-cols-5 gap-6">
-            <!-- Card 1: Domestic Rooftop (spans 3 cols) -->
-            <div class="reveal glass-card p-6 sm:p-8 lg:col-span-3 flex flex-col justify-between group cursor-default relative overflow-hidden">
-                <!-- Subtle inner glow on hover -->
-                <div class="absolute inset-0 bg-gradient-to-br from-emerald-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none rounded-2xl"></div>
-                <div class="relative z-10">
-                    <div class="w-14 h-14 rounded-2xl bg-emerald-500/15 flex items-center justify-center mb-5 text-2xl text-emerald-400">
-                        <i class="fa-solid fa-house-chimney"></i>
-                    </div>
-                    <h3 class="font-space font-bold text-2xl sm:text-3xl text-white mb-3">Domestic Rooftop Solar</h3>
-                    <p class="text-gray-400 text-sm sm:text-base leading-relaxed mb-4">Harness the power of <span class="text-white font-medium">PM Surya Ghar Yojna</span> with subsidized rooftop installations. Zero your electricity bill with premium panels backed by a 25-year performance warranty.</p>
-                    <div class="flex flex-wrap gap-3 text-xs sm:text-sm">
-                        <span class="glass-card px-3 py-1.5 rounded-full text-emerald-300 font-medium">₹78,000 Max Subsidy</span>
-                        <span class="glass-card px-3 py-1.5 rounded-full text-blue-300 font-medium">25 Yrs Warranty</span>
-                        <span class="glass-card px-3 py-1.5 rounded-full text-white font-medium">1kW – 10kW Systems</span>
-                    </div>
-                </div>
-                <a href="#calculator" class="relative z-10 inline-flex items-center gap-2 text-emerald-400 font-semibold mt-6 hover:gap-3 transition-all duration-300 group/link">
-                    Calculate Your Savings <i class="fa-solid fa-arrow-right group-hover/link:translate-x-1 transition-transform"></i>
-                </a>
-            </div>
-
-            <!-- Card 2: Solar Pumps (spans 2 cols) -->
-            <div class="reveal glass-card p-6 sm:p-8 lg:col-span-2 flex flex-col justify-between group cursor-default relative overflow-hidden">
-                <div class="absolute inset-0 bg-gradient-to-bl from-blue-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none rounded-2xl"></div>
-                <div class="relative z-10">
-                    <div class="w-14 h-14 rounded-2xl bg-blue-500/15 flex items-center justify-center mb-5 text-2xl text-blue-400">
-                        <i class="fa-solid fa-tractor"></i>
-                    </div>
-                    <h3 class="font-space font-bold text-2xl sm:text-3xl text-white mb-3">Agricultural Solar Pumps</h3>
-                    <p class="text-gray-400 text-sm sm:text-base leading-relaxed mb-4">Empower your farm with <span class="text-white font-medium">PM-KUSUM</span> solar pumps. Get up to 75% government grant on 3HP to 10HP pumps for reliable, cost-free irrigation.</p>
-                    <div class="flex flex-wrap gap-3 text-xs sm:text-sm">
-                        <span class="glass-card px-3 py-1.5 rounded-full text-blue-300 font-medium">75% Govt Grant</span>
-                        <span class="glass-card px-3 py-1.5 rounded-full text-emerald-300 font-medium">3HP – 10HP</span>
-                        <span class="glass-card px-3 py-1.5 rounded-full text-white font-medium">Farm Use</span>
-                    </div>
-                </div>
-                <a href="#calculator" class="relative z-10 inline-flex items-center gap-2 text-blue-400 font-semibold mt-6 hover:gap-3 transition-all duration-300 group/link" onclick="document.getElementById('calcToggleAgri').click(); setTimeout(()=>document.getElementById('calculator').scrollIntoView({behavior:'smooth'}),200); return false;">
-                    Check Pump Subsidy <i class="fa-solid fa-arrow-right group-hover/link:translate-x-1 transition-transform"></i>
-                </a>
-            </div>
+        <div class="mt-5">
+          <div class="flex justify-between text-xs text-white/50 mb-2">
+            <span>Subsidy covers <span id="subsidyPercentOut">35%</span> of system cost</span>
+          </div>
+          <div class="w-full h-2 rounded-full bg-white/10 overflow-hidden">
+            <div id="subsidyBar" class="h-full bg-gradient-to-r from-[var(--green)] to-[var(--blue)] transition-all duration-500" style="width:0%"></div>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
 
-    <!-- ==================== INTERACTIVE ROI DASHBOARD ==================== -->
-    <section class="relative z-10 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto py-16 sm:py-24" id="calculator">
-        <div class="reveal text-center mb-10">
-            <p class="text-emerald-400 font-semibold text-sm tracking-widest uppercase mb-3 font-space">Interactive Calculator</p>
-            <h2 class="font-space font-bold text-4xl sm:text-5xl text-white">ROI Dashboard</h2>
-            <p class="text-gray-400 mt-3 max-w-lg mx-auto">Toggle between residential and agricultural to see your exact savings.</p>
+    <!-- Agriculture Panel -->
+    <div id="panelAgri" class="hidden grid md:grid-cols-2 gap-10">
+      <div>
+        <p class="text-sm text-white/50">Pump Capacity</p>
+        <div class="relative mt-4">
+          <select id="pumpSelect" class="appearance-none w-full glass rounded-xl px-4 py-3 pr-10 font-display text-lg bg-transparent focus:outline-none" aria-label="Pump capacity in horsepower">
+            <option value="3">3 HP</option>
+            <option value="5" selected>5 HP</option>
+            <option value="7.5">7.5 HP</option>
+            <option value="10">10 HP</option>
+          </select>
+          <i class="fa-solid fa-chevron-down absolute right-4 top-1/2 -translate-y-1/2 text-white/40 text-sm pointer-events-none"></i>
         </div>
+        <p class="text-xs text-white/40 mt-6 leading-relaxed">
+          PM-KUSUM Component-B replaces diesel pump sets with solar, with up to 75% capital
+          subsidy for farmers in Haryana.
+        </p>
+      </div>
 
-        <!-- Toggle -->
-        <div class="reveal flex justify-center mb-10">
-            <div class="glass-card p-1.5 rounded-full flex items-center gap-1 relative">
-                <button id="calcToggleRes" class="toggle-option toggle-active px-6 sm:px-8 py-3 rounded-full text-sm sm:text-base font-semibold font-space bg-transparent text-white transition-all duration-300">
-                    <i class="fa-solid fa-house-chimney mr-2"></i> Residential Unit
-                </button>
-                <button id="calcToggleAgri" class="toggle-option px-6 sm:px-8 py-3 rounded-full text-sm sm:text-base font-semibold font-space bg-transparent text-white transition-all duration-300">
-                    <i class="fa-solid fa-tractor mr-2"></i> Agricultural Pump
-                </button>
-            </div>
+      <div class="space-y-3">
+        <div class="glass rounded-2xl p-5 flex items-center justify-between">
+          <span class="text-sm text-white/50">Market Price</span>
+          <span class="font-display text-lg line-through text-white/40" id="agriMarketOut">₹2,50,000</span>
         </div>
-
-        <!-- Calculator Card -->
-        <div class="reveal glass-card p-6 sm:p-8 lg:p-10 relative overflow-hidden" id="calcCard">
-            <div class="absolute top-0 right-0 w-40 h-40 bg-emerald-500/8 rounded-full blur-3xl pointer-events-none"></div>
-            <div class="absolute bottom-0 left-0 w-40 h-40 bg-blue-500/8 rounded-full blur-3xl pointer-events-none"></div>
-
-            <div class="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
-                <!-- Input Panel -->
-                <div id="inputPanel">
-                    <!-- Residential Input -->
-                    <div id="residentialInput">
-                        <label class="block text-sm font-semibold text-gray-300 mb-2 font-space tracking-wide">Monthly Electricity Bill</label>
-                        <div class="flex items-center gap-4 mb-2">
-                            <span class="text-3xl font-bold text-white font-space" id="billDisplay">₹3,000</span>
-                            <span class="text-xs text-gray-500">/ month</span>
-                        </div>
-                        <input type="range" id="billSlider" min="1000" max="15000" step="500" value="3000" class="w-full mb-3">
-                        <div class="flex justify-between text-xs text-gray-500">
-                            <span>₹1,000</span>
-                            <span>₹7,500</span>
-                            <span>₹15,000</span>
-                        </div>
-                        <p class="text-xs text-gray-500 mt-3"><i class="fa-solid fa-info-circle text-emerald-400 mr-1"></i> Assumed tariff: ₹7/unit • Avg 120 units/kW/month</p>
-                    </div>
-
-                    <!-- Agricultural Input -->
-                    <div id="agriculturalInput" class="hidden">
-                        <label class="block text-sm font-semibold text-gray-300 mb-3 font-space tracking-wide">Select Pump Capacity</label>
-                        <select id="pumpSelect" class="w-full glass-card px-5 py-4 rounded-xl text-white font-semibold text-lg cursor-pointer focus:outline-none focus:ring-2 focus:ring-emerald-400/50 transition-all bg-[#0a0a0a]">
-                            <option value="3">3 HP</option>
-                            <option value="5" selected>5 HP</option>
-                            <option value="7.5">7.5 HP</option>
-                            <option value="10">10 HP</option>
-                        </select>
-                        <p class="text-xs text-gray-500 mt-3"><i class="fa-solid fa-info-circle text-blue-400 mr-1"></i> PM-KUSUM Scheme • 75% Central/State Grant</p>
-                    </div>
-                </div>
-
-                <!-- Output Panel -->
-                <div id="outputPanel" class="space-y-5">
-                    <!-- Residential Output -->
-                    <div id="residentialOutput">
-                        <div class="flex items-center justify-between py-3 border-b border-white/8">
-                            <span class="text-gray-400 text-sm">Recommended System</span>
-                            <span class="text-white font-bold text-xl font-space" id="resKw">4 kW</span>
-                        </div>
-                        <div class="flex items-center justify-between py-3 border-b border-white/8">
-                            <span class="text-gray-400 text-sm">Total System Cost</span>
-                            <span class="text-white font-bold text-lg font-space" id="resTotalCost">₹2,20,000</span>
-                        </div>
-                        <div class="flex items-center justify-between py-3 border-b border-white/8">
-                            <span class="text-gray-400 text-sm">Govt Subsidy</span>
-                            <span class="text-emerald-400 font-bold text-lg font-space" id="resSubsidy">- ₹78,000</span>
-                        </div>
-                        <div class="flex items-center justify-between py-3 border-b border-white/8">
-                            <span class="text-gray-400 text-sm">Net Investment</span>
-                            <span class="text-white font-bold text-2xl font-space" id="resNetCost">₹1,42,000</span>
-                        </div>
-                        <div class="flex items-center justify-between py-3">
-                            <span class="text-gray-400 text-sm">Payback Timeline</span>
-                            <span class="text-emerald-300 font-bold text-lg font-space" id="resPayback">~3.9 Years</span>
-                        </div>
-                        <div class="mt-4 p-4 rounded-xl bg-emerald-500/10 border border-emerald-500/20">
-                            <p class="text-emerald-300 text-sm font-medium"><i class="fa-solid fa-lightbulb mr-2"></i> After payback, enjoy <strong class="text-white">free electricity</strong> for 20+ years!</p>
-                        </div>
-                    </div>
-
-                    <!-- Agricultural Output -->
-                    <div id="agriculturalOutput" class="hidden">
-                        <div class="flex items-center justify-between py-3 border-b border-white/8">
-                            <span class="text-gray-400 text-sm">Market Price</span>
-                            <span class="text-gray-500 line-through text-lg font-space" id="agriMarketPrice">₹2,50,000</span>
-                        </div>
-                        <div class="flex items-center justify-between py-3 border-b border-white/8">
-                            <span class="text-gray-400 text-sm">Govt Grant (75%)</span>
-                            <span class="text-blue-400 font-bold text-lg font-space" id="agriGrant">- ₹1,87,500</span>
-                        </div>
-                        <div class="flex items-center justify-between py-3 border-b border-white/8">
-                            <span class="text-gray-400 text-sm">Farmer's Share (25%)</span>
-                            <span class="text-white font-bold text-2xl font-space" id="agriFarmerShare">₹62,500</span>
-                        </div>
-                        <div class="flex items-center justify-between py-3">
-                            <span class="text-gray-400 text-sm">You Save</span>
-                            <span class="text-emerald-400 font-bold text-lg font-space" id="agriSavings">₹1,87,500</span>
-                        </div>
-                        <div class="mt-4 p-4 rounded-xl bg-blue-500/10 border border-blue-500/20">
-                            <p class="text-blue-300 text-sm font-medium"><i class="fa-solid fa-lightbulb mr-2"></i> One-time investment for <strong class="text-white">lifetime irrigation</strong> – no fuel, no electricity bills.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- CTA inside calculator -->
-            <div class="relative z-10 mt-8 text-center">
-                <a href="#contact" class="inline-flex items-center gap-2 bg-white/5 hover:bg-white/10 border border-white/15 text-white font-semibold px-7 py-3.5 rounded-full transition-all duration-300 hover:scale-105 font-space text-sm">
-                    <i class="fa-solid fa-paper-plane text-emerald-400"></i> Get Detailed Quote
-                </a>
-            </div>
+        <div class="glass rounded-2xl p-5 flex items-center justify-between">
+          <span class="text-sm text-white/50">Govt Grant (75%)</span>
+          <span class="font-display text-xl text-[var(--blue)]" id="agriGrantOut">₹1,87,500</span>
         </div>
-    </section>
-
-    <!-- ==================== ABOUT / TRUST SECTION ==================== -->
-    <section class="relative z-10 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto py-12 sm:py-20 text-center" id="about">
-        <div class="reveal">
-            <p class="text-emerald-400 font-semibold text-sm tracking-widest uppercase mb-4 font-space">Why Prime Solar</p>
-            <h2 class="font-space font-bold text-3xl sm:text-4xl text-white mb-6">Empaneled. Trusted. Local.</h2>
-            <p class="text-gray-400 max-w-2xl mx-auto leading-relaxed">
-                As <span class="text-white font-medium">UHBVN-empaneled installers</span>, we bring government-backed solar expertise to your doorstep in <span class="text-white">Karnal, Panipat, and Ambala</span>. From subsidy paperwork to installation and maintenance, we handle everything — so you can sit back and watch your energy bills vanish.
-            </p>
-            <div class="flex flex-wrap justify-center gap-6 mt-10 text-sm text-gray-400">
-                <div class="glass-card px-5 py-4 rounded-xl flex items-center gap-3">
-                    <i class="fa-solid fa-file-shield text-emerald-400 text-xl"></i>
-                    <span>UHBVN Empaneled</span>
-                </div>
-                <div class="glass-card px-5 py-4 rounded-xl flex items-center gap-3">
-                    <i class="fa-solid fa-screwdriver-wrench text-emerald-400 text-xl"></i>
-                    <span>End-to-End Service</span>
-                </div>
-                <div class="glass-card px-5 py-4 rounded-xl flex items-center gap-3">
-                    <i class="fa-solid fa-headset text-emerald-400 text-xl"></i>
-                    <span>Lifetime Support</span>
-                </div>
-            </div>
+        <div class="glass rounded-2xl p-5 flex items-center justify-between border border-[rgba(16,185,129,0.35)]">
+          <span class="text-sm text-white/70">Your Share (25%)</span>
+          <span class="font-display text-2xl text-[var(--green)]" id="agriShareOut">₹62,500</span>
         </div>
-    </section>
+      </div>
+    </div>
 
-    <!-- ==================== FOOTER ==================== -->
-    <footer class="relative z-10 border-t border-white/8 mt-8" id="contact">
-        <div class="px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto py-16 sm:py-24">
-            <div class="reveal text-center mb-16">
-                <a href="#" class="inline-block font-space font-bold text-6xl sm:text-8xl lg:text-9xl text-white hover:text-emerald-400 transition-all duration-500 tracking-tight leading-none">
-                    START NOW
-                </a>
-                <p class="text-gray-500 mt-6 text-lg">Ready to slash your energy costs? Let's talk.</p>
-            </div>
+  </div>
+</section>
 
-            <div class="reveal grid grid-cols-1 sm:grid-cols-3 gap-8 text-center sm:text-left border-t border-white/6 pt-10">
-                <!-- Brand -->
-                <div>
-                    <div class="flex items-center justify-center sm:justify-start gap-2 mb-3">
-                        <div class="w-8 h-8 rounded-full bg-gradient-to-br from-emerald-400 to-emerald-600 flex items-center justify-center shadow-lg shadow-emerald-500/40">
-                            <i class="fa-solid fa-bolt text-white text-xs"></i>
-                        </div>
-                        <span class="font-space font-bold text-lg text-white">Prime<span class="text-emerald-400">Solar</span></span>
-                    </div>
-                    <p class="text-gray-500 text-sm">UHBVN Empaneled • Haryana</p>
-                </div>
+<!-- ============ FOOTER ============ -->
+<footer id="contact" class="relative z-10 border-t border-white/10 mt-10">
+  <div class="max-w-7xl mx-auto px-6 py-20">
+    <div class="reveal">
+      <p class="text-xs tracking-[0.2em] text-white/40 font-display mb-6">READY WHEN YOU ARE</p>
+      <h2 class="font-display text-[16vw] sm:text-7xl lg:text-8xl font-semibold leading-none text-gradient">START NOW</h2>
+      <div class="mt-8 flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-8">
+        <a href="mailto:primesolarsolution98@gmail.com" class="text-lg text-white/70 hover:text-white transition inline-flex items-center gap-3">
+          <i class="fa-solid fa-envelope"></i> primesolarsolution98@gmail.com
+        </a>
+        <a href="tel:+919050319785" class="text-lg text-white/70 hover:text-white transition inline-flex items-center gap-3">
+          <i class="fa-solid fa-phone"></i> +91 90503 19785
+        </a>
+      </div>
+    </div>
 
-                <!-- Contact -->
-                <div class="text-sm text-gray-400 space-y-2">
-                    <p class="text-white font-semibold mb-2">Contact</p>
-                    <p><i class="fa-solid fa-envelope text-emerald-400 mr-2"></i> primesolarsolution98@gmail.com </p>
-                    <p><i class="fa-solid fa-phone text-emerald-400 mr-2"></i> +91 90503 19785</p>
-                    <p><i class="fa-solid fa-location-dot text-emerald-400 mr-2"></i> Karnal, Haryana 132001</p>
-                </div>
+    <div class="reveal mt-16 pt-8 border-t border-white/10 flex flex-col sm:flex-row justify-between gap-4 text-sm text-white/40">
+      <p>© 2026 Prime Solar. All rights reserved.</p>
+      <p>Karnal · Panipat · Ambala, Haryana</p>
+      <div class="flex gap-4 text-base">
+        <a href="#" class="hover:text-white transition" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" class="hover:text-white transition" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="#" class="hover:text-white transition" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
 
-                <!-- Service Areas -->
-                <div class="text-sm text-gray-400 space-y-2">
-                    <p class="text-white font-semibold mb-2">Serving</p>
-                    <p>📍 Karnal</p>
-                    <p>📍 Panipat</p>
-                    <p>📍 Ambala</p>
-                </div>
-            </div>
+<!-- ============ MOBILE FLOATING CALL BUTTON ============ -->
+<div class="sm:hidden fixed bottom-6 right-6 z-50">
+  <span class="absolute inset-0 rounded-full bg-[var(--green)] opacity-60 animate-ping"></span>
+  <a href="tel:+919050319785" aria-label="Call Prime Solar" class="relative w-14 h-14 rounded-full bg-[var(--green)] text-black flex items-center justify-center text-xl shadow-[0_0_25px_rgba(16,185,129,0.6)]">
+    <i class="fa-solid fa-phone"></i>
+  </a>
+</div>
 
-            <!-- Copyright -->
-            <div class="reveal text-center mt-12 pt-8 border-t border-white/6">
-                <p class="text-gray-600 text-xs">&copy; 2026 Prime Solar. All rights reserved. | UHBVN Empaneled Installers</p>
-                <p class="text-gray-700 text-xs mt-1">PM Surya Ghar Yojna • PM-KUSUM • Grid-Connected Rooftop Solar</p>
-            </div>
-        </div>
-    </footer>
+<script>
+  /* ============ MOBILE MENU ============ */
+  const menuBtn = document.getElementById('menuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+  document.querySelectorAll('.mobile-link').forEach(link => {
+    link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+  });
 
-    <!-- ==================== SCRIPTS ==================== -->
-    <script>
-        (function() {
-            // ========== MOBILE MENU ==========
-            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-            const mobileMenu = document.getElementById('mobileMenu');
-            let menuOpen = false;
+  /* ============ NAVBAR SCROLL SHADOW ============ */
+  const navInner = document.getElementById('navInner');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 20) {
+      navInner.style.boxShadow = '0 8px 30px rgba(0,0,0,0.5)';
+    } else {
+      navInner.style.boxShadow = 'none';
+    }
+  });
 
-            mobileMenuBtn.addEventListener('click', () => {
-                menuOpen = !menuOpen;
-                if (menuOpen) {
-                    mobileMenu.classList.remove('opacity-0', 'pointer-events-none', 'scale-95');
-                    mobileMenu.classList.add('opacity-100', 'pointer-events-auto', 'scale-100');
-                    mobileMenuBtn.innerHTML = '<i class="fa-solid fa-xmark"></i>';
-                } else {
-                    mobileMenu.classList.add('opacity-0', 'pointer-events-none', 'scale-95');
-                    mobileMenu.classList.remove('opacity-100', 'pointer-events-auto', 'scale-100');
-                    mobileMenuBtn.innerHTML = '<i class="fa-solid fa-bars"></i>';
-                }
-            });
+  /* ============ SCROLL REVEAL ============ */
+  const revealEls = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in-view');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+  revealEls.forEach(el => observer.observe(el));
 
-            // Close mobile menu when a link is clicked
-            document.querySelectorAll('.mobile-link').forEach(link => {
-                link.addEventListener('click', () => {
-                    menuOpen = false;
-                    mobileMenu.classList.add('opacity-0', 'pointer-events-none', 'scale-95');
-                    mobileMenu.classList.remove('opacity-100', 'pointer-events-auto',
-                        'scale-100');
-                    mobileMenuBtn.innerHTML = '<i class="fa-solid fa-bars"></i>';
-                });
-            });
+  /* ============ CALCULATOR TOGGLE ============ */
+  const tabResidential = document.getElementById('tabResidential');
+  const tabAgri = document.getElementById('tabAgri');
+  const toggleIndicator = document.getElementById('toggleIndicator');
+  const panelResidential = document.getElementById('panelResidential');
+  const panelAgri = document.getElementById('panelAgri');
 
-            // ========== SCROLL REVEAL (Intersection Observer) ==========
-            const revealElements = document.querySelectorAll('.reveal');
-            const observerOptions = {
-                root: null,
-                rootMargin: '0px 0px -60px 0px',
-                threshold: 0.12,
-            };
+  function showResidential() {
+    panelResidential.classList.remove('hidden');
+    panelAgri.classList.add('hidden');
+    tabResidential.classList.add('text-black');
+    tabResidential.classList.remove('text-white/70');
+    tabAgri.classList.add('text-white/70');
+    tabAgri.classList.remove('text-black');
+    toggleIndicator.style.transform = 'translateX(0%)';
+  }
 
-            const revealObserver = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('revealed');
-                        revealObserver.unobserve(entry.target);
-                    }
-                });
-            }, observerOptions);
+  function showAgri() {
+    panelAgri.classList.remove('hidden');
+    panelResidential.classList.add('hidden');
+    tabAgri.classList.add('text-black');
+    tabAgri.classList.remove('text-white/70');
+    tabResidential.classList.add('text-white/70');
+    tabResidential.classList.remove('text-black');
+    toggleIndicator.style.transform = 'translateX(100%)';
+  }
 
-            revealElements.forEach(el => revealObserver.observe(el));
+  tabResidential.addEventListener('click', showResidential);
+  tabAgri.addEventListener('click', showAgri);
 
-            // ========== CALCULATOR TOGGLE ==========
-            const toggleRes = document.getElementById('calcToggleRes');
-            const toggleAgri = document.getElementById('calcToggleAgri');
-            const residentialInput = document.getElementById('residentialInput');
-            const agriculturalInput = document.getElementById('agriculturalInput');
-            const residentialOutput = document.getElementById('residentialOutput');
-            const agriculturalOutput = document.getElementById('agriculturalOutput');
-            let calcMode = 'residential'; // 'residential' or 'agricultural'
+  /* ============ FORMAT HELPER ============ */
+  function formatINR(num) {
+    return '₹' + Math.round(num).toLocaleString('en-IN');
+  }
 
-            function setCalcMode(mode) {
-                calcMode = mode;
-                if (mode === 'residential') {
-                    toggleRes.classList.add('toggle-active');
-                    toggleAgri.classList.remove('toggle-active');
-                    residentialInput.classList.remove('hidden');
-                    agriculturalInput.classList.add('hidden');
-                    residentialOutput.classList.remove('hidden');
-                    agriculturalOutput.classList.add('hidden');
-                    updateResidentialCalc();
-                } else {
-                    toggleAgri.classList.add('toggle-active');
-                    toggleRes.classList.remove('toggle-active');
-                    agriculturalInput.classList.remove('hidden');
-                    residentialInput.classList.add('hidden');
-                    agriculturalOutput.classList.remove('hidden');
-                    residentialOutput.classList.add('hidden');
-                    updateAgriculturalCalc();
-                }
-            }
+  /* ============ RESIDENTIAL CALCULATOR (PM SURYA GHAR) ============ */
+  const billRange = document.getElementById('billRange');
+  const billDisplay = document.getElementById('billDisplay');
+  const unitsOut = document.getElementById('unitsOut');
+  const kwOut = document.getElementById('kwOut');
+  const subsidyOut = document.getElementById('subsidyOut');
+  const netCostOut = document.getElementById('netCostOut');
+  const paybackOut = document.getElementById('paybackOut');
+  const subsidyPercentOut = document.getElementById('subsidyPercentOut');
+  const subsidyBar = document.getElementById('subsidyBar');
 
-            toggleRes.addEventListener('click', () => setCalcMode('residential'));
-            toggleAgri.addEventListener('click', () => setCalcMode('agricultural'));
+  function calcResidential(bill) {
+    const units = bill / 7;
+    let kw = Math.ceil(units / 120);
+    if (kw < 1) kw = 1;
 
-            // ========== RESIDENTIAL CALCULATOR ==========
-            const billSlider = document.getElementById('billSlider');
-            const billDisplay = document.getElementById('billDisplay');
-            const resKw = document.getElementById('resKw');
-            const resTotalCost = document.getElementById('resTotalCost');
-            const resSubsidy = document.getElementById('resSubsidy');
-            const resNetCost = document.getElementById('resNetCost');
-            const resPayback = document.getElementById('resPayback');
+    let subsidy;
+    if (kw === 1) subsidy = 30000;
+    else if (kw === 2) subsidy = 60000;
+    else subsidy = 78000;
 
-            function formatINR(amount) {
-                return '₹' + amount.toLocaleString('en-IN');
-            }
+    const totalCost = kw * 55000;
+    const netCost = totalCost - subsidy;
+    const paybackYears = netCost / (bill * 12);
 
-            function updateResidentialCalc() {
-                const monthlyBill = parseInt(billSlider.value);
-                billDisplay.textContent = formatINR(monthlyBill);
+    return { units, kw, subsidy, totalCost, netCost, paybackYears };
+  }
 
-                const unitsPerMonth = monthlyBill / 7;
-                const rawKw = unitsPerMonth / 120;
-                const requiredKw = Math.max(1, Math.ceil(rawKw));
+  function updateResidential() {
+    const bill = parseInt(billRange.value, 10);
+    billDisplay.textContent = formatINR(bill);
 
-                let subsidy = 0;
-                if (requiredKw === 1) {
-                    subsidy = 30000;
-                } else if (requiredKw === 2) {
-                    subsidy = 60000;
-                } else {
-                    subsidy = 78000; // 3kW or more, capped at ₹78,000
-                }
+    const r = calcResidential(bill);
+    unitsOut.textContent = Math.round(r.units);
+    kwOut.textContent = r.kw + ' kW';
+    subsidyOut.textContent = formatINR(r.subsidy);
+    netCostOut.textContent = formatINR(r.netCost);
+    paybackOut.textContent = r.paybackYears.toFixed(1) + ' Yrs';
 
-                const ratePerKw = 55000;
-                const totalCost = requiredKw * ratePerKw;
-                const netCost = totalCost - subsidy;
-                const annualBill = monthlyBill * 12;
-                const paybackYears = annualBill > 0 ? netCost / annualBill : 0;
+    const pct = Math.min(100, (r.subsidy / r.totalCost) * 100);
+    subsidyPercentOut.textContent = pct.toFixed(0) + '%';
+    subsidyBar.style.width = pct.toFixed(0) + '%';
+  }
 
-                resKw.textContent = requiredKw + ' kW';
-                resTotalCost.textContent = formatINR(totalCost);
-                resSubsidy.textContent = '- ' + formatINR(subsidy);
-                resNetCost.textContent = formatINR(Math.max(0, netCost));
-                resPayback.textContent = '~' + paybackYears.toFixed(1) + ' Years';
-            }
+  billRange.addEventListener('input', updateResidential);
 
-            billSlider.addEventListener('input', () => {
-                if (calcMode === 'residential') updateResidentialCalc();
-            });
+  /* ============ AGRICULTURE CALCULATOR (PM-KUSUM) ============ */
+  const pumpSelect = document.getElementById('pumpSelect');
+  const agriMarketOut = document.getElementById('agriMarketOut');
+  const agriGrantOut = document.getElementById('agriGrantOut');
+  const agriShareOut = document.getElementById('agriShareOut');
 
-            // ========== AGRICULTURAL CALCULATOR ==========
-            const pumpSelect = document.getElementById('pumpSelect');
-            const agriMarketPrice = document.getElementById('agriMarketPrice');
-            const agriGrant = document.getElementById('agriGrant');
-            const agriFarmerShare = document.getElementById('agriFarmerShare');
-            const agriSavings = document.getElementById('agriSavings');
+  const pumpBaseCost = {
+    '3': 180000,
+    '5': 250000,
+    '7.5': 350000,
+    '10': 450000,
+  };
 
-            const pumpCosts = {
-                3: 180000,
-                5: 250000,
-                7.5: 350000,
-                10: 450000,
-            };
+  function updateAgri() {
+    const hp = pumpSelect.value;
+    const base = pumpBaseCost[hp];
+    const grant = base * 0.75;
+    const share = base * 0.25;
 
-            function updateAgriculturalCalc() {
-                const hp = parseFloat(pumpSelect.value);
-                const baseCost = pumpCosts[hp] || pumpCosts[5];
-                const grant = Math.round(baseCost * 0.75);
-                const farmerShare = Math.round(baseCost * 0.25);
+    agriMarketOut.textContent = formatINR(base);
+    agriGrantOut.textContent = formatINR(grant);
+    agriShareOut.textContent = formatINR(share);
+  }
 
-                agriMarketPrice.textContent = formatINR(baseCost);
-                agriGrant.textContent = '- ' + formatINR(grant);
-                agriFarmerShare.textContent = formatINR(farmerShare);
-                agriSavings.textContent = formatINR(grant);
-            }
+  pumpSelect.addEventListener('change', updateAgri);
 
-            pumpSelect.addEventListener('change', () => {
-                if (calcMode === 'agricultural') updateAgriculturalCalc();
-            });
+  /* ============ INIT ============ */
+  showResidential();
+  updateResidential();
+  updateAgri();
+</script>
 
-            // ========== INITIALIZE DEFAULTS ==========
-            setCalcMode('residential');
-            updateResidentialCalc();
-            updateAgriculturalCalc();
-
-            // ========== NAVBAR SCROLL EFFECT ==========
-            const navbar = document.getElementById('navbar');
-            let lastScrollY = 0;
-            window.addEventListener('scroll', () => {
-                const scrollY = window.scrollY;
-                if (scrollY > 100) {
-                    navbar.style.background = 'rgba(8,8,8,0.75)';
-                    navbar.style.boxShadow = '0 4px 30px rgba(0,0,0,0.7)';
-                } else {
-                    navbar.style.background = 'rgba(10,10,10,0.6)';
-                    navbar.style.boxShadow = '0 4px 30px rgba(0,0,0,0.5)';
-                }
-                lastScrollY = scrollY;
-            });
-
-            // ========== SMOOTH SCROLL FOR ALL ANCHOR LINKS ==========
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function(e) {
-                    const href = this.getAttribute('href');
-                    if (href === '#') return;
-                    const target = document.querySelector(href);
-                    if (target) {
-                        e.preventDefault();
-                        const navHeight = 90;
-                        const targetPosition = target.getBoundingClientRect().top + window
-                            .pageYOffset - navHeight;
-                        window.scrollTo({
-                            top: targetPosition,
-                            behavior: 'smooth',
-                        });
-                    }
-                });
-            });
-
-            console.log('%c⚡ Prime Solar %cDashboard Ready',
-                'color: #10b981; font-size: 20px; font-weight: bold;',
-                'color: #fff; font-size: 14px;');
-            console.log('%cUHBVN Empaneled • Karnal • Panipat • Ambala',
-                'color: #3b82f6; font-size: 12px;');
-            console.log('%cPM Surya Ghar Yojna • PM-KUSUM • Grid-Connected Solar',
-                'color: #6b7280; font-size: 11px;');
-        })();
-    </script>
 </body>
 </html>
