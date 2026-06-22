@@ -41,14 +41,17 @@
   }
   *{box-sizing:border-box;}
   html{scroll-behavior:smooth;}
+  html, body{
+    max-width:100vw;
+    overflow-x:hidden;
+  }
   body{
     background:var(--bg);
     color:var(--ink);
     font-family:'Outfit',sans-serif;
-    overflow-x:hidden;
     position:relative;
   }
-  section, footer{scroll-margin-top:110px;}
+  section, footer{scroll-margin-top:110px; width:100%;}
   .font-display{font-family:'Space Grotesk',sans-serif;}
 
   /* ---------- scrollbar ---------- */
@@ -93,6 +96,10 @@
     border:1px solid var(--border);
     backdrop-filter:blur(20px);
     -webkit-backdrop-filter:blur(20px);
+    min-width:0;
+  }
+  .glass *{
+    min-width:0;
   }
 
   /* ---------- animated gradient text ---------- */
@@ -105,8 +112,9 @@
   @keyframes gradientShift{0%{background-position:0% 50%;}100%{background-position:300% 50%;}}
 
   /* ---------- marquee ---------- */
-  .marquee-wrap{overflow:hidden;}
-  .marquee-track{display:flex;align-items:center;width:max-content;gap:2.5rem;animation:marquee 30s linear infinite;}
+  .marquee-wrap{overflow:hidden; width:100%;}
+  .marquee-track{display:flex;align-items:center;min-width:100%;gap:2.5rem;animation:marquee 30s linear infinite;}
+  .marquee-wrap{max-width:100%;}
   .marquee-wrap:hover .marquee-track{animation-play-state:paused;}
   @keyframes marquee{from{transform:translateX(0);}to{transform:translateX(-50%);}}
 
@@ -231,7 +239,7 @@
       <i class="fa-solid fa-phone text-[var(--green)]"></i> Or call us directly: <span class="text-white">+91 90503 19785</span>
     </a>
 
-    <div class="mt-14 flex sm:grid sm:grid-cols-3 gap-6 sm:max-w-md overflow-x-auto sm:overflow-visible snap-x snap-mandatory no-scrollbar -mx-6 px-6 sm:mx-0 sm:px-0 pb-1">
+    <div class="mt-14 flex sm:grid sm:grid-cols-3 gap-6 sm:max-w-md overflow-x-auto sm:overflow-visible snap-x snap-mandatory no-scrollbar mx-0 px-4 sm:mx-0 sm:px-0 pb-1">
       <div class="shrink-0 snap-start min-w-[150px] sm:min-w-0">
         <p class="font-display text-2xl sm:text-3xl text-white">600+</p>
         <p class="text-xs text-white/50 mt-1">Installations Live</p>
@@ -362,7 +370,7 @@
     </div>
   </div>
 
-  <div class="mt-5 flex sm:grid sm:grid-cols-3 gap-5 overflow-x-auto sm:overflow-visible snap-x snap-mandatory no-scrollbar -mx-6 px-6 sm:mx-0 sm:px-0 pb-2">
+  <div class="mt-5 flex sm:grid sm:grid-cols-3 gap-5 overflow-x-auto sm:overflow-visible snap-x snap-mandatory no-scrollbar mx-0 px-4 sm:mx-0 sm:px-0 pb-2">
     <div id="coverage" class="reveal glass rounded-3xl p-6 flex flex-col justify-between min-h-[150px] shrink-0 snap-start min-w-[78%] sm:min-w-0">
       <i class="fa-solid fa-location-dot text-xl text-[var(--green)]"></i>
       <div>
@@ -409,7 +417,7 @@
   </div>
 
   <!-- Panels -->
-  <div class="reveal glass rounded-[1.8rem] mt-6 p-6 sm:p-10">
+  <div class="reveal glass rounded-[1.8rem] mt-6 p-6 sm:p-10 overflow-hidden">
 
     <!-- Residential Panel -->
     <div id="panelResidential" class="grid md:grid-cols-2 gap-10">
@@ -428,7 +436,7 @@
 
       <div>
         <div class="flex sm:grid sm:grid-cols-2 gap-4 overflow-x-auto sm:overflow-visible snap-x snap-mandatory no-scrollbar pb-2">
-          <div class="glass rounded-2xl p-5 shrink-0 snap-start min-w-[44%] sm:min-w-0">
+          <div class="glass rounded-2xl p-5 shrink-0 snap-start min-w-[44%] sm:min-w-0 max-w-full">
             <p class="text-xs text-white/50">System Size</p>
             <p class="font-display text-2xl mt-2 text-[var(--green)]" id="kwOut">4 kW</p>
           </div>
