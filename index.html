@@ -51,7 +51,8 @@
     font-family:'Outfit',sans-serif;
     position:relative;
   }
-  section, footer{scroll-margin-top:110px; width:100%;}
+  section, footer{scroll-margin-top:110px; width:100%; overflow-x:hidden;}
+  nav{overflow-x:hidden;}
   .font-display{font-family:'Space Grotesk',sans-serif;}
 
   /* ---------- scrollbar ---------- */
@@ -116,6 +117,9 @@
   .marquee-track{display:flex;align-items:center;min-width:100%;gap:2.5rem;animation:marquee 30s linear infinite;}
   .marquee-wrap{max-width:100%;}
   .marquee-wrap:hover .marquee-track{animation-play-state:paused;}
+  .scroll-list{overflow-x:auto; -webkit-overflow-scrolling:touch;}
+  .scroll-list > *{min-width:220px;}
+  @media (min-width: 640px){.scroll-list > *{min-width:auto;}}
   @keyframes marquee{from{transform:translateX(0);}to{transform:translateX(-50%);}}
 
   /* ---------- scroll reveal ---------- */
@@ -239,7 +243,7 @@
       <i class="fa-solid fa-phone text-[var(--green)]"></i> Or call us directly: <span class="text-white">+91 90503 19785</span>
     </a>
 
-    <div class="mt-14 flex sm:grid sm:grid-cols-3 gap-6 sm:max-w-md overflow-x-auto sm:overflow-visible snap-x snap-mandatory no-scrollbar mx-0 px-4 sm:mx-0 sm:px-0 pb-1">
+    <div class="mt-14 flex sm:grid sm:grid-cols-3 gap-6 sm:max-w-md scroll-list sm:overflow-visible snap-x snap-mandatory no-scrollbar mx-0 px-4 sm:mx-0 sm:px-0 pb-1">
       <div class="shrink-0 snap-start min-w-[150px] sm:min-w-0">
         <p class="font-display text-2xl sm:text-3xl text-white">600+</p>
         <p class="text-xs text-white/50 mt-1">Installations Live</p>
@@ -370,7 +374,7 @@
     </div>
   </div>
 
-  <div class="mt-5 flex sm:grid sm:grid-cols-3 gap-5 overflow-x-auto sm:overflow-visible snap-x snap-mandatory no-scrollbar mx-0 px-4 sm:mx-0 sm:px-0 pb-2">
+  <div class="mt-5 flex sm:grid sm:grid-cols-3 gap-5 scroll-list sm:overflow-visible snap-x snap-mandatory no-scrollbar mx-0 px-4 sm:mx-0 sm:px-0 pb-2">
     <div id="coverage" class="reveal glass rounded-3xl p-6 flex flex-col justify-between min-h-[150px] shrink-0 snap-start min-w-[78%] sm:min-w-0">
       <i class="fa-solid fa-location-dot text-xl text-[var(--green)]"></i>
       <div>
@@ -435,7 +439,7 @@
       </div>
 
       <div>
-        <div class="flex sm:grid sm:grid-cols-2 gap-4 overflow-x-auto sm:overflow-visible snap-x snap-mandatory no-scrollbar pb-2">
+        <div class="flex sm:grid sm:grid-cols-2 gap-4 scroll-list sm:overflow-visible snap-x snap-mandatory no-scrollbar pb-2">
           <div class="glass rounded-2xl p-5 shrink-0 snap-start min-w-[44%] sm:min-w-0 max-w-full">
             <p class="text-xs text-white/50">System Size</p>
             <p class="font-display text-2xl mt-2 text-[var(--green)]" id="kwOut">4 kW</p>
